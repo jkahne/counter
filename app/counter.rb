@@ -2,6 +2,11 @@ class Counter
 
   attr_accessor :values,  :val
 
+  def self.numbers; Counter.new('0123456789'); end
+  def self.binary; Counter.new('01'); end
+  def self.trinary; Counter.new('012'); end
+  def self.alphabet; Counter.new('abcdefghijklmnopqrstuvwxyz'); end
+
   def initialize(values)
     @values = values.split('')
     @val = String.new(@values.first)
