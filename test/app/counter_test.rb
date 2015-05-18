@@ -33,5 +33,16 @@ describe Counter do
     assert_equal '2234667800', n.val
   end
 
+  it 'increments' do
+    assert_equal '0', n.val
+    n.increment
+    assert_equal '1', n.val
+    8.times { n.increment }
+    assert_equal '9', n.val
+    n.increment
+    assert_equal '10', n.val
+  end
+
+
 end
 
