@@ -29,4 +29,8 @@ class Counter
     ((@val.length - 1) - pos)
   end
 
+  def _increment_char_at pos
+    @val[_switched_val_index(pos)] = _next_character_for(pos)
+  end
+
 end

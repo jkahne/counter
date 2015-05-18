@@ -21,5 +21,17 @@ describe Counter do
     assert_equal '0', n._next_character_for(1)
   end
 
+  it 'basic _increment_char_at' do
+    n.val = '1234567890'
+    n._increment_char_at 5
+    assert_equal '1234667890', n.val
+
+    n._increment_char_at 9
+    assert_equal '2234667890', n.val
+
+    n._increment_char_at 1
+    assert_equal '2234667800', n.val
+  end
+
 end
 
